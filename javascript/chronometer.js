@@ -16,12 +16,22 @@ class Chronometer {
 
   getMinutes() {
     // ... your code goes here
-    return Math.floor(this.currentTime / 60);
+    console.log(Math.floor(this.currentTime / 60));
+    let minutesFormatNumber = ('0'+Math.floor(this.currentTime / 60)).slice(-2);
+    return minutesFormatNumber;
+    
   }
 
   getSeconds() {
     // ... your code goes here
-    return Math.floor(this.currentTime % 60);
+    console.log(Math.floor(this.currentTime % 60));
+    let secondsFormatNumber = ('0'+ Math.floor(this.currentTime % 60)).slice(-2);
+    return secondsFormatNumber;
+  }
+  
+  getMillSeconds() {
+    let millsecondsFormatNumber = ('0'+Math.floor((this.currentTime %60)%60)).slice(-2);
+    return millsecondsFormatNumber;
   }
 
   computeTwoDigitNumber(value) {
